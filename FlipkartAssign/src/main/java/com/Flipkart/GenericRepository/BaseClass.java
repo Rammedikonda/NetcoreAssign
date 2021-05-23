@@ -35,7 +35,7 @@ public class BaseClass {
 			driver.manage().timeouts().implicitlyWait(AutomationConstants.implicitwaittime, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
 		}
-		@BeforeMethod(alwaysRun=true)
+		@BeforeMethod
 		public void configBeforeMethod() throws Exception
 		{
 			/*
