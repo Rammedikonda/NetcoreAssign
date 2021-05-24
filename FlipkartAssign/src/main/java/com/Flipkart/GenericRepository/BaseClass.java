@@ -17,23 +17,24 @@ public class BaseClass {
 		@BeforeClass
 		public void configBeforeClass() throws Exception
 		{
-			if(dh.getDataFromProperty("browser").equals("chrome"))
+			if(dh.getDataFromProperty("Browser").equals("chrome"))
 			{
 			
-			  System.setProperty("webdriver.chrome.driver", AutomationConstants.CHROME_PATH);
+			  System.setProperty("webdriver.chrome.driver", AutomationConstant.CHROME_PATH);
 					driver=new ChromeDriver();
-				}else if(dh.getDataFromProperty("browser").equals("firefox")) 
+				}else if(dh.getDataFromProperty("Browser").equals("firefox")) 
 				{
-					 System.setProperty("webdriver.firefox.driver",AutomationConstants.FIREFOX_PATH);
+					 System.setProperty("webdriver.firefox.driver",AutomationConstant.FIREFOX_PATH);
 					driver=new FirefoxDriver();
 				}
-				else if(dh.getDataFromProperty("browser").equals("opera")) 
+				else if(dh.getDataFromProperty("Browser").equals("opera")) 
 				{
 					driver=new OperaDriver();
 				}
 			driver.manage().deleteAllCookies();
-			driver.manage().timeouts().implicitlyWait(AutomationConstants.implicitwaittime, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(AutomationConstant.implicitwaittime, TimeUnit.SECONDS);
+			
 		}
 		@BeforeMethod
 		public void configBeforeMethod() throws Exception

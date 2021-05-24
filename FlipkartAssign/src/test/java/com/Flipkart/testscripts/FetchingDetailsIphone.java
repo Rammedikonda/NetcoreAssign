@@ -20,7 +20,7 @@ public class FetchingDetailsIphone extends BaseClass {
 	{
 		Homepage hp=PageFactory.initElements(driver, Homepage.class);
 		hp.getLoginPopup().click();
-		hp.getSearchBOX().sendKeys("iphones less than 40000",Keys.ENTER);
+		hp.getSearchBOXtxt().sendKeys("iphones less than 40000",Keys.ENTER);
 		WebElement searchResult = hp.getContentVal();
 		
 		Assert.assertEquals(searchResult.isDisplayed(), true);

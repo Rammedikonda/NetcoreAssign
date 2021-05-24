@@ -11,7 +11,7 @@ public class Homepage {
 	private WebElement LoginPopup;
 	
 	@FindBy(name="q")
-	private WebElement searchBOX;
+	private WebElement searchBOXtxt;
 	
 	@FindBy(xpath="//span[contains(text(),'Showing 1 – 24 ')]")
 	private WebElement ContentVal;
@@ -42,9 +42,9 @@ public class Homepage {
 		return LoginPopup;
 	}
 
-	public WebElement getSearchBOX() 
+	public WebElement getSearchBOXtxt() 
 	{
-		return searchBOX;
+		return searchBOXtxt;
 	}
 
 	public WebElement getContentVal() 

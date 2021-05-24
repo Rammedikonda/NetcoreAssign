@@ -28,8 +28,8 @@ public class WebDriverUtility {
 	 * @param data
 	 */
 	public void select(WebElement element , int index) {
-		Select sel = new Select(element);
-		sel.selectByIndex(index);
+		Select sel9 = new Select(element);
+		sel9.selectByIndex(index);
 	}
 	
 	/**

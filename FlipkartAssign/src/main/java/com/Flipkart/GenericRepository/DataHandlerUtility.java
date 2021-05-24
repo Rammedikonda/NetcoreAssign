@@ -9,7 +9,7 @@ public class DataHandlerUtility {
 	private static Properties pobj=new Properties();
 	public String getDataFromProperty(String key) throws Exception
 	{
-		 fis=new FileInputStream(AutomationConstants.PROP_PATH);
+		 fis=new FileInputStream(AutomationConstant.PROP_PATH);
 		pobj.load(fis);
 		return pobj.getProperty(key);
 	}

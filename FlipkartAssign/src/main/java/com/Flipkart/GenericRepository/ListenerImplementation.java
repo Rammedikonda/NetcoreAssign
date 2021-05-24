@@ -20,9 +20,9 @@ public void onTestFailure(ITestResult result)
 	
 	try {
 		FileUtils.copyFile(srcFile, dstFile);
-	} catch (Exception e) {
+	} catch (Exception ep) {
     
-	   e.printStackTrace();
+	   ep.printStackTrace();
 	}
 }
 
